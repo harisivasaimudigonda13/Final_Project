@@ -1,0 +1,167 @@
+.entire_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin-bottom: 500px;
+}
+
+.chatting {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 150px;
+}
+
+.chat-item {
+    max-width: 90%;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    align-self: center;
+}
+
+.area {
+    max-width: 100%;
+    height: auto;
+    overflow-x: scroll;
+}
+
+.chat-item p {
+    margin: 5px 0;
+}
+
+.chat-item:nth-child(odd) {
+    background-color: #3a8ce4;
+    color: black;
+}
+
+.chat-item:nth-child(even) {
+    background-color: #e0e0e0;
+    margin-top: 10px;
+    color: black;
+}
+
+.prompt {
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.genAn {
+    text-align: justify;
+}
+
+.input_form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.input_form form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.textarea {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.msg_logo {
+    height: 30px;
+    width: 30px;
+    fill: white;
+}
+
+.input_form form {
+    flex-grow: 1;
+}
+
+.input_form form textarea {
+    flex-grow: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-item {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .textarea {
+        padding: 8px; /* Adjust padding for smaller screens */
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .chat-item {
+        max-width: 95%; /* Full width for extra-small screens */
+    }
+
+    .textarea {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .chat-item {
+        max-width: 70%; /* Wider on large screens */
+    }
+
+    .textarea {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .button {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+}
